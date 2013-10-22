@@ -1,0 +1,38 @@
+<h1> Search Tomatobase </h1>
+<%= form_tag search_index_path, :method => :get do %>
+  <%= label_tag :title %>
+  <%= text_field_tag :title %>
+
+  <%= label_tag :limit %>
+  <%= text_field_tag :limit %>
+
+  <%= submit_tag "Search" %>
+<% end %>
+
+<% if @movie %>
+  <h2> <%= @movie.title %> </h2> 
+  <h2> Year: <%= @movie.year %> </h2> 
+  <h2> Critics Score: <%= @movie.ratings.critics_score %> </h2>
+  <p> Synopsis: <%= @movie.synopsis %> </p>
+  <img src="<%= @movie.posters.detailed %>" alt="Movie Poster"> 
+
+  <%= button_to("Want to See!", {
+    :controller => "movies", 
+    :action => "create", 
+    :method => :post, 
+    movie: {
+      title: @movie.title,
+      year: @movie.year,
+      img_url: @movie.posters.detailed,
+      rt_score: @movie.ratings.critics_score
+    }
+  }) %>
+
+  <%= button_to("HATED IT", {:controller => "movies", :action => "create", :method => :post})%>
+
+  <%= button_to("LOVED IT", {:controller => "movies", :action => "create", :method => :post})%>
+<% end %>
+
+
+
+
