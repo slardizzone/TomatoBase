@@ -19,9 +19,7 @@
     <p> Synopsis: <%= @movie.synopsis %> </p>
     <img src="<%= @movie.posters.detailed %>" alt="Movie Poster"> 
 
-
-    
-    <%= form_tag( user_movies_path(User.first), :method => :post ) do %>
+    <%= form_tag( user_movies_path(session[:user_id]), :method => :post ) do %>
      
       <%= hidden_field_tag( "movie[title]", @movie.title) %>
       <%= hidden_field_tag( "movie[year]", @movie.year) %>

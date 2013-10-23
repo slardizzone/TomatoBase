@@ -5,16 +5,28 @@ class MoviesController < ApplicationController
 
   def create
 
-    binding.pry
-
     @movie = Movie.new(movie_params)
     @movie.save
-    
 
-    redirect_to user_movies_path
+    movie_id = @movie.id || Movie.find_by(title: movie_params[:title]).id
+
+    @reviewed_movie = ReviewedMovie.new(
+      :user_id => session[:user_id], 
+      :movie_id => movie_id, 
+      :category => params[:movie][:category])
+    
+    @reviewed_movie.save
+
+    category = params[:movie][:category].gsub( /\s/, "+" )
+    #binding.pry
+    
+    redirect_to user_movies_path + "?category=#{category}"
   end
 
   def index
+
+    @reviews = User.find(current_user).reviewed_movies
+
     render :index
   end
 
@@ -22,7 +34,5 @@ class MoviesController < ApplicationController
 
   def movie_params
     params.require(:movie).permit(:title, :year, :img_url, :plot, :cast, :rt_score)
-  end
-
-
+  end    
 end

@@ -1,1 +1,10 @@
-<h1><%= @movie %></h1>
+<%= debug params %>
+
+
+<ul>
+<% @reviews.each do |review| %>
+  <% if review.category == params[:category] %>
+  <li><%= review.movie.title %></li>
+  <% end %>
+<% end %>
+</ul>

@@ -46,3 +46,14 @@
     width: 125px;
     text-align: center;
  }
+
+ h3 {
+  margin-bottom: 0px;
+  margin-top: 5px;
+ }
+
+ li {
+  list-style: none;
+  float: left;
+  padding-right: 10px;
+ }
