@@ -1,10 +1,8 @@
-<%= debug params %>
-
-
 <ul>
 <% @reviews.each do |review| %>
   <% if review.category == params[:category] %>
   <li><%= review.movie.title %></li>
+  <img src="<%= review.movie.img_url %>" alt="Movie Poster">
   <% end %>
 <% end %>
 </ul>
