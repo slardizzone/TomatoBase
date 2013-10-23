@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
 
     @movie = Movie.new(movie_params)
     @movie.save
+    
 
     redirect_to user_movies_path
   end

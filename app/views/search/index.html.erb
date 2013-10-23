@@ -1,6 +1,5 @@
-<div class="container">
-  <div class="search_header">
-    <h1> Search Tomatobase </h1>
+<div class="search_header">
+  <h1> Search Tomatobase </h1>
     <%= form_tag search_index_path, :method => :get do %>
       <%= label_tag :title %>
       <%= text_field_tag :title %>
@@ -10,8 +9,9 @@
 
       <%= submit_tag "Search" %>
     <% end %>
-  </div>
+</div>
 
+<div class="container">
   <% if @movie %>
     <h2> <%= @movie.title %> </h2> 
     <h2> Year: <%= @movie.year %> </h2> 
