@@ -1,14 +1,20 @@
 <div class="header">
-  <h1>New Releases</h1>
+  <h1>In Theaters</h1>
+
+  <%= link_to "Search Movies", search_index_path %>
+  
 </div>
+
 <div class="container">
   <% @movie.each do |movie| %>
   <div class="movie">
     <h2> <%= movie.title %> </h2>
     <h3> In Theaters: <%= movie.release_dates.theater %></h3>
     <h3> RottenTomatoes Score: <%= movie.ratings.critics_score %> </h3>
-    <img src= "<%= movie.posters.detailed %>" alt="Movie Poster">
-    <p> <%= movie.synopsis %> </p>
+      <div class="poster-summary">
+        <img src= "<%= movie.posters.detailed %>" alt="Movie Poster">
+        <p> <%= movie.synopsis %> </p>
+      </div>
     <ul> 
       <% movie.abridged_cast.each do |cast| %>
         <li> <%= cast.name %> </li>

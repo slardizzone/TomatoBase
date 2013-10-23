@@ -31,13 +31,14 @@
  }
 
  .search_header {
+    height: 100px;
     text-align: center; 
     background-color: red; 
-    margin: 0;
+    margin: 0px;
  }
 
  .search_header h1 {
-    margin: 0px;
+    margin: 0px auto;
  }
 
  .new-session {
@@ -46,6 +47,14 @@
     padding: 20px;
     width: 125px;
     text-align: center;
+ }
+
+ .movie {
+    border: 1px solid black;
+ }
+
+ .poster-summary img {
+    float: left;
  }
 
  h3 {

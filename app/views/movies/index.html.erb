@@ -1,8 +1,8 @@
-<ul>
-<% @reviews.each do |review| %>
-  <% if review.category == params[:category] %>
-  <li><%= review.movie.title %></li>
-  <img src="<%= review.movie.img_url %>" alt="Movie Poster">
+<div class="container">
+  <% @reviews.each do |review| %>
+    <% if review.category == params[:category] %>
+    <p><%= review.movie.title %></p>
+    <img src="<%= review.movie.img_url %>" alt="Movie Poster">
+    <% end %>
   <% end %>
-<% end %>
-</ul>
+</div>
