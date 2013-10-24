@@ -13,7 +13,7 @@
   <h1>New On DVD</h1>
   <% @movie.each do |movie| %>
   <div class="movie">
-    <img src= "<%= movie.posters.detailed %>" alt="Movie Poster">
+    <img src= "<%= movie.posters.detailed %>" alt="Movie Poster" width="200">
     <h2> <%= movie.title %> </h2>
     <h3> On DVD: <%= movie.release_dates.dvd %></h3>
     <h3> RottenTomatoes Score: <%= movie.ratings.critics_score %> </h3>

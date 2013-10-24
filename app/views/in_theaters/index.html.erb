@@ -8,14 +8,14 @@
   <h1>In Theaters</h1>
   <% @movie.each do |movie| %>
   <div class="movie">
-    <img src= "<%= movie.posters.detailed %>" alt="Movie Poster">
+    <img src= "<%= movie.posters.detailed %>" alt="Movie Poster" width="175">
     <h2> <%= movie.title %> </h2>
     <h3> In Theaters: <%= movie.release_dates.theater %></h3>
     <h3> RottenTomatoes Score: <%= movie.ratings.critics_score %> </h3>
         <p> <%= movie.synopsis %> </p>
       
       <% movie.abridged_cast.each do |cast| %>
-        <ul>
+        <ul> 
           <li> <%= cast.name %> </li>
         </ul>
       <% end %> 

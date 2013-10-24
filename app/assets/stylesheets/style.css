@@ -1,5 +1,9 @@
 /* GENERAL STYLES */
 
+body {
+  background-color: #F3F2F7;
+}
+
 ul {
   margin: 0;
  }
@@ -33,6 +37,13 @@ a {
     width: 960px;
     margin: 0 auto;
     text-align: center;
+ }
+
+ .container h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 55px;
+  margin-top: 10px;
+  color: #40403E;
  }
 
  
@@ -87,11 +98,12 @@ a.nav {
 /************* MOVIES ************/
 
  .movie {
-    height: 450px;
+    height: 475px;
+    /*border: 1px solid black;*/
  }
 
  .movie img {
-    margin: 50px 10px;
+    margin: 130px 10px 10px 10px;
     float: left;
  }
 
@@ -101,7 +113,15 @@ a.nav {
  }
 
  .movie h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300; 
     margin-top: 0px;
+    margin-bottom: 5px; 
+    font-size: 40px;
+ }
+
+ .movie ul {
+  text-align: center; 
  }
 
  .user_categories {
