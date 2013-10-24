@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= link_to "Want To See", user_movies_path(current_user) + "?category=Want+to+see" %>
 
 <%= yield %>
 

@@ -23,6 +23,10 @@ class MoviesController < ApplicationController
 
   def index
     @reviews = User.find(current_user).reviewed_movies
+    @filter = params[:category]
+    if @filter
+      @reviews = @reviews.where(category: @filter)
+    end
     render :index
   end
 
