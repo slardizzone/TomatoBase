@@ -9,16 +9,9 @@
 <body>
 <% if logged_in? %>
       <ul>
-        <li><%= link_to 'Logout', session_path, :method => :delete %></li>
+        <li><%= link_to 'Logout', session_path, :method => :delete, class: "logout" %></li>
       </ul>
 <% end %>
-<div class="header">
-  <div class="user_categories">
-    <%= link_to "Want To See", user_movies_path(current_user) + "?category=Want+to+see" %>
-    <%= link_to "Hated", user_movies_path(current_user) + "?category=HATED+IT" %>
-    <%= link_to "Loved", user_movies_path(current_user) + "?category=LOVED+IT" %>
-    </div>
-</div>
 
 <%= yield %>
 

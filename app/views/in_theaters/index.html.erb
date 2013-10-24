@@ -1,12 +1,10 @@
 <div class="header">
-  <h1>In Theaters</h1>
-
   <%= link_to "Search Movies", search_index_path %>
   <%= link_to "New on DVD", new_releases_path %>
-
 </div>
 
 <div class="container">
+  <h1>In Theaters</h1>
   <% @movie.each do |movie| %>
   <div class="movie">
     <img src= "<%= movie.posters.detailed %>" alt="Movie Poster">
