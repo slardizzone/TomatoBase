@@ -1,4 +1,9 @@
 <div class="header">
+  <% if logged_in? %>
+    <ul>
+      <li><%= link_to 'Logout', session_path, :method => :delete, class: "logout" %></li>
+    </ul>
+  <% end %>
   <%= link_to "Search Movies", search_index_path %>
   <%= link_to "Currently In Theaters", in_theaters_path %>
 </div>
