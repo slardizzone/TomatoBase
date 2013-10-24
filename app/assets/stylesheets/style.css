@@ -6,7 +6,6 @@ ul {
 
 form {
   display: inline-block;
-  margin-bottom
  }
 
 input {
@@ -29,24 +28,27 @@ a {
  }
 
 
-/* CONTAINER */
+/************* CONTAINER ************/
 .container {
     width: 960px;
     margin: 0 auto;
-    text-align: center
+    text-align: center;
  }
 
  
-/* HEADER */
+/************* HEADER ************/
  .header {
     height: 60px;
     text-align: center; 
-    background-color: red; 
+    background-color: #E82C0C; 
  }
 
  .header h1 {
-    font-size: 20px;
+    margin: 0px 0px 0px 10px;
+    font-size: 40px;
     float: left;
+    font-family: 'Pacifico', cursive;
+    color: white;
  }
 
  .header form {
@@ -61,8 +63,11 @@ a.nav {
   float: right;
 }
 
+ ul a .logout {
+  float: right;
+ }
 
-
+/************* LOGIN ************/
 .new-session {
     margin: 20px auto;
     border: 2px solid black;
@@ -79,25 +84,7 @@ a.nav {
   margin-top: 5px;
 }
 
-
-
-.search_header {
-    height: 100px;
-    text-align: center; 
-    background-color: #E82C0C; 
-    margin: 0px;
- }
-
- .search_header form {
-    margin: 10px;
- }
-
- .search_header h1 {
-    margin: 0px auto;
- }
-
-
-/* MOVIE STYLING */
+/************* MOVIES ************/
 
  .movie {
     height: 450px;
@@ -121,6 +108,4 @@ a.nav {
   float: right;
  }
 
- ul a .logout {
-  float: right;
- }
+
