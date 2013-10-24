@@ -1,8 +1,8 @@
 <div class="header">
-  <h1>In Theaters</h1>
+  <h1>New On DVD</h1>
 
   <%= link_to "Search Movies", search_index_path %>
-  <%= link_to "New on DVD", new_releases_path %>
+  <%= link_to "Currently In Theaters", in_theaters_path %>
 
 </div>
 
@@ -11,7 +11,7 @@
   <div class="movie">
     <img src= "<%= movie.posters.detailed %>" alt="Movie Poster">
     <h2> <%= movie.title %> </h2>
-    <h3> In Theaters: <%= movie.release_dates.theater %></h3>
+    <h3> On DVD: <%= movie.release_dates.dvd %></h3>
     <h3> RottenTomatoes Score: <%= movie.ratings.critics_score %> </h3>
         <p> <%= movie.synopsis %> </p>
       

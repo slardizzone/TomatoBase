@@ -10,6 +10,7 @@
       <%= submit_tag "Search" %>
     <% end %>
     <%= link_to "Currently In Theaters", in_theaters_path %>
+     <%= link_to "New on DVD", new_releases_path %>
 </div>
 
 <div class="container">
@@ -20,16 +21,18 @@
     <p> Synopsis: <%= @movie.synopsis %> </p>
     <img src="<%= @movie.posters.detailed %>" alt="Movie Poster"> 
 
+  <div class="buttons">
     <%= form_tag( user_movies_path(session[:user_id]), :method => :post ) do %>
      
-      <%= hidden_field_tag( "movie[title]", @movie.title) %>
-      <%= hidden_field_tag( "movie[year]", @movie.year) %>
-      <%= hidden_field_tag( "movie[img_url]", @movie.posters.detailed) %>
-      <%= hidden_field_tag( "movie[rt_score]", @movie.ratings.critics_score) %>
+      <%= hidden_field_tag("movie[title]", @movie.title) %>
+      <%= hidden_field_tag("movie[year]", @movie.year) %>
+      <%= hidden_field_tag("movie[img_url]", @movie.posters.detailed) %>
+      <%= hidden_field_tag("movie[rt_score]", @movie.ratings.critics_score) %>
 
       <%= submit_tag "Want to see", name: "movie[category]" %>
       <%= submit_tag "HATED IT", name: "movie[category]" %>
       <%= submit_tag "LOVED IT", name: "movie[category]" %>
+  </div>
 
     <% end %>
   <% end %>

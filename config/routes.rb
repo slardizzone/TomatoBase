@@ -1,5 +1,6 @@
 Tomatobase::Application.routes.draw do
   resources :in_theaters, only: [:index]
+  resources :new_releases, only: [:index]
   resources :search, only: [:index]
   resources :users, except: [:index] do
     resources :movies, only: [:create, :index, :show]

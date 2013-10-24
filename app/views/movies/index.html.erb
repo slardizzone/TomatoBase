@@ -1,8 +1,10 @@
 <div class="container">
   <% @reviews.each do |review| %>
     <% if review.category == params[:category] %>
-    <p><%= review.movie.title %></p>
+    <p><a href="http://www.canistream.it/search/movie/<%= review.movie.title.gsub( /\s/, '+' )%>"><%= review.movie.title %></a></p>
     <img src="<%= review.movie.img_url %>" alt="Movie Poster">
     <% end %>
   <% end %>
 </div>
+
+

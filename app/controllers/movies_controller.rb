@@ -4,7 +4,6 @@ class MoviesController < ApplicationController
   end
 
   def create
-
     @movie = Movie.new(movie_params)
     @movie.save
 
@@ -18,15 +17,12 @@ class MoviesController < ApplicationController
     @reviewed_movie.save
 
     category = params[:movie][:category].gsub( /\s/, "+" )
-    #binding.pry
-    
+
     redirect_to user_movies_path + "?category=#{category}"
   end
 
   def index
-
     @reviews = User.find(current_user).reviewed_movies
-
     render :index
   end
 
