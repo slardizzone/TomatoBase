@@ -1,7 +1,7 @@
 <div class="header">
   <h1> TomatoBase </h1>
-  <%= link_to "Search Movies", search_index_path, class: "nav" %>
-  <%= link_to "New on DVD", new_releases_path, class: "nav" %>
+  <%= link_to "Search Movies", search_index_path, class: "white nav" %>
+  <%= link_to "New on DVD", new_releases_path, class: "white nav" %>
 </div>
 
 <div class="container">
@@ -12,25 +12,22 @@
     <h2> <%= movie.title %> </h2>
     <h3> In Theaters: <%= movie.release_dates.theater %></h3>
     <h3> RottenTomatoes Score: <%= movie.ratings.critics_score %> </h3>
-        <p> <%= movie.synopsis %> </p>
-      
-      <% movie.abridged_cast.each do |cast| %>
-        <ul> 
-          <li> <%= cast.name %> </li>
-        </ul>
-      <% end %> 
+    <p> <%= movie.synopsis %> </p>
+    <% movie.abridged_cast.each do |cast| %>
+      <ul> 
+        <li> <%= cast.name %> </li>
+      </ul>
+    <% end %> 
 
     <%= form_tag( user_movies_path(session[:user_id]), :method => :post ) do %>
-   
-    <%= hidden_field_tag( "movie[title]", movie.title) %>
-    <%= hidden_field_tag( "movie[year]", movie.year) %>
-    <%= hidden_field_tag( "movie[img_url]", movie.posters.detailed) %>
-    <%= hidden_field_tag( "movie[rt_score]", movie.ratings.critics_score) %>
+      <%= hidden_field_tag( "movie[title]", movie.title) %>
+      <%= hidden_field_tag( "movie[year]", movie.year) %>
+      <%= hidden_field_tag( "movie[img_url]", movie.posters.detailed) %>
+      <%= hidden_field_tag( "movie[rt_score]", movie.ratings.critics_score) %>
 
-    <%= submit_tag "Want to see", name: "movie[category]" %>
-    <%= submit_tag "HATED IT", name: "movie[category]" %>
-    <%= submit_tag "LOVED IT", name: "movie[category]" %>
-
+      <%= submit_tag "Want to see", name: "movie[category]" %>
+      <%= submit_tag "HATED IT", name: "movie[category]" %>
+      <%= submit_tag "LOVED IT", name: "movie[category]" %>
     <% end %>
   </div>
  <% end %>

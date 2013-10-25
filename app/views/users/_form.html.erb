@@ -4,15 +4,22 @@
   <% end %>
 <% end %>
 
-<%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+<div class="container">
+  <div class="login-form">
+    <h1>Sign up</h1>
+  </div>
+  <%= form_for @user do |f| %>
+    <div class="user-form">
+      <%= f.label :email %>
+      <%= f.email_field :email %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
 
-  <%= f.submit %>
-<% end %>
+      <%= f.submit "Sign Up" %>
+    </div>
+  <% end %>
+</div>

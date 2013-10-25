@@ -5,10 +5,14 @@
 </div>
 
 <div class="container">
-  <% @reviews.each do |review| %>
-    <p><a href="http://www.canistream.it/search/movie/<%= review.movie.title.gsub( /\s/, '+' )%>"><%= review.movie.title %></a></p>
-    <img src="<%= review.movie.img_url %>" alt="Movie Poster">
-  <% end %>
+  <div class="all-movies">
+    <% @reviews.each do |review| %>
+      <div class="single-movie">
+        <p><a href="http://www.canistream.it/search/movie/<%= review.movie.title.gsub( /\s/, '+' )%>"><%= review.movie.title %></a></p>
+        <img src="<%= review.movie.img_url %>" alt="Movie Poster" width="175">
+      </div>
+    <% end %>
+  </div>
 </div>
 
 

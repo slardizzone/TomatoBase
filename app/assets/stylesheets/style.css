@@ -66,12 +66,19 @@ a {
   margin-top: 15px;
  }
 
-a.nav {
-  margin-top: 10px;
- }
 
 .header li {
   float: right;
+}
+
+.white.nav {
+  float:right;
+  margin: 0px 20px; 
+  display:inline-block;
+  top: 2.5em;
+  position: relative;
+  color: white;
+  text-decoration: none; 
 }
 
  ul a .logout {
@@ -79,7 +86,7 @@ a.nav {
  }
 
 /************* LOGIN ************/
-.new-session {
+.user-form {
     margin: 20px auto;
     border: 2px solid black;
     padding: 20px;
@@ -87,13 +94,28 @@ a.nav {
     text-align: center;
  }
 
-.new-session input {
+.user-form input {
   margin-top: 5px;
 }
 
-.new-session .sign-up {
+.user-form.sign-up {
   margin-top: 5px;
 }
+
+.user-form h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+}
+
+.login_form a.sign-up {
+  text-decoration: none;
+}
+
+/*.login-form h1 {
+  margin-bottom: ;
+}
+*/
+
 
 /************* MOVIES ************/
 
@@ -128,4 +150,28 @@ a.nav {
   float: right;
  }
 
+/************* CATEGORIZED MOVIES (TILED) ************/
+.all-movies {
+  display: inline-block;
+}
+.single-movie {
+  width: 192px;
+  float: left;
+}
+
+.single-movie a {
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300px; 
+  color: #40403E;
+}
+
+.single-movie a:hover {
+  color: #43B200;
+}
+
+.single-movie p {
+  margin-bottom: 10px;
+}
 

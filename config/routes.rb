@@ -1,4 +1,5 @@
 Tomatobase::Application.routes.draw do
+  root 'sessions#new'
   resources :in_theaters, only: [:index]
   resources :new_releases, only: [:index]
   resources :search, only: [:index]
