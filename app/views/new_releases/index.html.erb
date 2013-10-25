@@ -1,12 +1,12 @@
 <div class="header">
   <h1> TomatoBase </h1>
-  <% if logged_in? %>
-    <ul>
-      <li><%= link_to 'Logout', session_path, :method => :delete, class: "logout" %></li>
-    </ul>
-  <% end %>
-  <%= link_to "Search Movies", search_index_path %>
-  <%= link_to "Currently In Theaters", in_theaters_path %>
+    <% if logged_in? %>
+      <ul>
+        <li><%= link_to 'Logout', session_path, :method => :delete, class: "logout" %></li>
+      </ul>
+     <% end %>
+  <%= link_to "Search", search_index_path, class: "white nav" %>
+  <%= link_to "In Theaters", in_theaters_path, class: "white nav" %>
 </div>
 
 <div class="container">

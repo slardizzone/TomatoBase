@@ -73,12 +73,13 @@ a {
 
 .white.nav {
   float:right;
-  margin: 0px 20px; 
+  margin: 0px 8px; 
   display:inline-block;
   top: 2.5em;
   position: relative;
   color: white;
   text-decoration: none; 
+  font-size: 16px;
 }
 
  ul a .logout {
@@ -163,7 +164,7 @@ a {
   font-size: 20px;
   text-decoration: none;
   font-family: 'Oswald', sans-serif;
-  font-weight: 300px; 
+  font-weight: 300; 
   color: #40403E;
 }
 
@@ -174,4 +175,19 @@ a {
 .single-movie p {
   margin-bottom: 10px;
 }
+
+/************* SEARCH MOVIES ************/
+.search-movie h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+
+
 
