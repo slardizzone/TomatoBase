@@ -5,11 +5,15 @@
         <li><%= link_to 'Logout', session_path, :method => :delete, class: "logout" %></li>
       </ul>
     <% end %>
-  <%= link_to "Search", search_index_path, class: "green nav" %>
-  <%= link_to "New on DVD", new_releases_path, class: "green nav" %>
-  <%= link_to "Want To See", user_movies_path(session[:user_id]) + "?category=Want+to+see" %>
-  <%= link_to "Loved", user_movies_path(session[:user_id]) + "?category=LOVED+IT" %>
-  <%= link_to "Hated", user_movies_path(session[:user_id]) + "?category=HATED+IT" %>
+  <div class="movies-nav">
+    <%= link_to "Search", search_index_path, class: "green nav" %>
+    <%= link_to "New on DVD", new_releases_path, class: "green nav" %>
+  </div>
+  <div class="categories">
+    <%= link_to "Want To See", user_movies_path(session[:user_id]) + "?category=Want+to+see" %>
+    <%= link_to "Loved", user_movies_path(session[:user_id]) + "?category=LOVED+IT" %>
+    <%= link_to "Hated", user_movies_path(session[:user_id]) + "?category=HATED+IT" %>
+  </div>
 </div>
 
 <div class="container">
@@ -27,7 +31,7 @@
       </ul>
     <% end %> 
 
-    <%= form_tag( user_movies_path(session[:user_id]), :method => :post ) do %>
+    <%= form_tag(user_movies_path(session[:user_id]), :method => :post ) do %>
       <%= hidden_field_tag( "movie[title]", movie.title) %>
       <%= hidden_field_tag( "movie[year]", movie.year) %>
       <%= hidden_field_tag( "movie[img_url]", movie.posters.detailed) %>
