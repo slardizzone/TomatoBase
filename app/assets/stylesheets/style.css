@@ -189,6 +189,7 @@ a {
 }
 
 .single-movie {
+  height: 320px;
   width: 192px;
   float: left;
 }
