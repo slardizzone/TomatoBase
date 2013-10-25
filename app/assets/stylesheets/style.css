@@ -72,14 +72,16 @@ a {
 }
 
 .white.nav {
+  font-family: 'Oswald', 'sans-serif';
+  font-weight: 300;
   float:right;
-  margin: 0px 8px; 
   display:inline-block;
-  top: 2.5em;
+  margin-top: 30px;
+  margin-right: 15px;
   position: relative;
-  color: white;
+  color: #00FF00;
   text-decoration: none; 
-  font-size: 16px;
+  font-size: 20px;
 }
 
  ul a .logout {
