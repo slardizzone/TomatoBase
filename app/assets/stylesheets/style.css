@@ -6,30 +6,30 @@ body {
 
 ul {
   margin: 0;
- }
+}
 
 form {
   display: inline-block;
- }
+}
 
 input {
   width: 150px;
- }
+}
 
 li {
   list-style: none;
   float: left;
   padding-right: 10px;
- }
+}
 
 h3 {
   margin-bottom: 0px;
   margin-top: 5px;
- }
+}
 
 a {
   list-style: none; 
- }
+}
 
 
 /************* CONTAINER ************/
@@ -37,56 +37,64 @@ a {
     width: 960px;
     margin: 0 auto;
     text-align: center;
- }
+}
 
- .container h1 {
+.container h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 55px;
   margin-top: 10px;
   color: #40403E;
- }
+}
 
  
 /************* HEADER ************/
- .header {
+.header {
     height: 60px;
     text-align: center; 
     background-color: #E82C0C; 
- }
+}
 
- .header h1 {
+.header h1 {
     margin: 0px 0px 0px 10px;
     font-size: 40px;
     float: left;
     font-family: 'Pacifico', cursive;
     color: white;
- }
+}
 
- .header form {
-  margin-top: 15px;
- }
+.header form {
+  margin-top: 18px;
+}
 
+.header input {
+  width: 140px;
+}
 
 .header li {
   float: right;
 }
 
-.white.nav {
+.header .logout {
+  float: right;
+  text-decoration: none;
+  color: white;
+}
+
+/************* NAVIGATION ************/
+.green.nav {
   font-family: 'Oswald', 'sans-serif';
-  font-weight: 300;
+  font-weight: 400;
   float:right;
   display:inline-block;
   margin-top: 30px;
   margin-right: 15px;
   position: relative;
-  color: #00FF00;
+  color: #00D300;
   text-decoration: none; 
   font-size: 20px;
 }
 
- ul a .logout {
-  float: right;
- }
+
 
 /************* LOGIN ************/
 .user-form {
@@ -95,7 +103,7 @@ a {
     padding: 20px;
     width: 150px;
     text-align: center;
- }
+}
 
 .user-form input {
   margin-top: 5px;
@@ -122,41 +130,42 @@ a {
 
 /************* MOVIES ************/
 
- .movie {
+.movie {
     height: 475px;
     /*border: 1px solid black;*/
- }
+}
 
- .movie img {
+.movie img {
     margin: 130px 10px 10px 10px;
     float: left;
- }
+}
 
- .movie form {
+.movie form {
     margin-top: 25px;
     text-align: center; 
- }
+}
 
- .movie h2 {
+.movie h2 {
     font-family: 'Oswald', sans-serif;
     font-weight: 300; 
     margin-top: 0px;
     margin-bottom: 5px; 
     font-size: 40px;
- }
+}
 
  .movie ul {
   text-align: center; 
- }
+}
 
  .user_categories {
   float: right;
- }
+}
 
 /************* CATEGORIZED MOVIES (TILED) ************/
 .all-movies {
   display: inline-block;
 }
+
 .single-movie {
   width: 192px;
   float: left;

@@ -4,9 +4,13 @@
       <ul>
         <li><%= link_to 'Logout', session_path, :method => :delete, class: "logout" %></li>
       </ul>
-     <% end %>
-  <%= link_to "Search", search_index_path, class: "white nav" %>
-  <%= link_to "In Theaters", in_theaters_path, class: "white nav" %>
+    <% end %>
+  <%= link_to "Search", search_index_path, class: "green nav" %>
+  <%= link_to "In Theaters", in_theaters_path, class: "green nav" %>
+
+  <%= link_to "Want To See", user_movies_path(session[:user_id]) + "?category=Want+to+see" %>
+  <%= link_to "Loved", user_movies_path(session[:user_id]) + "?category=LOVED+IT" %>
+  <%= link_to "Hated", user_movies_path(session[:user_id]) + "?category=HATED+IT" %>
 </div>
 
 <div class="container">
@@ -17,13 +21,13 @@
     <h2> <%= movie.title %> </h2>
     <h3> On DVD: <%= movie.release_dates.dvd %></h3>
     <h3> RottenTomatoes Score: <%= movie.ratings.critics_score %> </h3>
-        <p> <%= movie.synopsis %> </p>
+    <p> <%= movie.synopsis %> </p>
       
-      <% movie.abridged_cast.each do |cast| %>
-        <ul>
-          <li> <%= cast.name %> </li>
-        </ul>
-      <% end %> 
+    <% movie.abridged_cast.each do |cast| %>
+      <ul>
+        <li> <%= cast.name %> </li>
+      </ul>
+    <% end %> 
 
     <%= form_tag( user_movies_path(session[:user_id]), :method => :post ) do %>
    

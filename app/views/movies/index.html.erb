@@ -5,11 +5,27 @@
         <li><%= link_to 'Logout', session_path, :method => :delete, class: "logout" %></li>
       </ul>
     <% end %>
-  <%= link_to "Search", search_index_path, class: "white nav" %>
-  <%= link_to "New on DVD", new_releases_path, class: "white nav" %>
+  <%= link_to "Search", search_index_path, class: "green nav" %>
+  <%= link_to "New on DVD", new_releases_path, class: "green nav" %>
+  
+  <%= link_to "Want To See", user_movies_path(session[:user_id]) + "?category=Want+to+see" %>
+  <%= link_to "Loved", user_movies_path(session[:user_id]) + "?category=LOVED+IT" %>
+  <%= link_to "Hated", user_movies_path(session[:user_id]) + "?category=HATED+IT" %>
 </div>
 
 <div class="container">
+
+  <% if user_movies_path(params[category: "HATED+IT"]) %>
+  <h1> Movies I Hate </h1> 
+
+  <% elsif user_movies_path(params[category: "LOVED+IT"]) %>
+  <h1> Movies I Love </h1>
+
+  <% elsif user_movies_path(params[category: "Want+to+see"]) %>
+  <h1> Movies I Want to See </h1>
+
+  <% end %>
+
   <div class="all-movies">
     <% @reviews.each do |review| %>
       <div class="single-movie">

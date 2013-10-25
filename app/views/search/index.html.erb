@@ -5,17 +5,22 @@
       <li><%= link_to 'Logout', session_path, :method => :delete, class: "logout" %></li>
     </ul>
   <% end %>
+
+  <%= link_to "In Theaters", search_index_path, class: "green nav" %>
+  <%= link_to "New on DVD", new_releases_path, class: "green nav" %>
+
+  <%= link_to "Want To See", user_movies_path(session[:user_id]) + "?category=Want+to+see" %>
+  <%= link_to "Loved", user_movies_path(session[:user_id]) + "?category=LOVED+IT" %>
+  <%= link_to "Hated", user_movies_path(session[:user_id]) + "?category=HATED+IT" %>
+</div>
+
+<div class="container">
+  <h1> Search </h1>
   <%= form_tag search_index_path, :method => :get do %>
     <%= label_tag :title %>
     <%= text_field_tag :title %>
     <%= submit_tag "Search" %>
   <% end %>
-  <%= link_to "In Theaters", in_theaters_path %>
-  <%= link_to "New on DVD", new_releases_path %>
-</div>
-
-<div class="container">
-  <h1> Search </h1>
   <% if @movies %>
     <% @movies.each do |movie| %>
       <div class="search-movie">
