@@ -1,0 +1,7 @@
+##TOMATOBASE
+
+TomatoBase is my first Ruby on Rails Application, which I developed at General Assembly during a 12 week Web Development Immersive Course. After completing week 4, we were required to build an application using Rails and the knowledge we learned up until that point. With the RottenTomatoes Ruby Gem and the RottenTomatoes API, I was able to build the application which was a challenging, yet extremely satisfying experience. 
+
+TomatoBase is a web application that assists users with searching for movies, and allows them to rate the titles based on personal opinion. Users can view movies by searching specific titles, or by viewing lists for newly released DVD titles and movies currently in theaters. It pulls information from the RottenTomatoes API, and displays Movies that are stored into three different categories (Want To See, Liked, Didn't Like) within each user's profile that they can refer back to.  From there they can easily check to see where those movies are available to stream online via Amazon, Netflix, Vudu, etc. It is currently up on Heroku at .............
+
+The biggest challenge of building TomatoBase was my lack of experience using Rails after learning its structure and conventions only a few days prior. Given the time constraints, it was difficult to apply best practices and produce something that actually works/looks decent. 

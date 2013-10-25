@@ -1,4 +1,4 @@
-/* GENERAL STYLES */
+/************* GENERAL STYLES ************/
 
 body {
   background-color: #F3F2F7;
@@ -207,6 +207,12 @@ a {
 
 .single-movie p {
   margin-bottom: 10px;
+}
+
+.movie-title {
+  height: 42px;
+  margin-bottom: 1em;
+  overflow: scroll;
 }
 
 /************* SEARCH MOVIES ************/

@@ -18,21 +18,21 @@
 
 <div class="container">
 
-  <% if user_movies_path(params[category: "HATED+IT"]) %>
-  <h1> Movies I Hate </h1> 
+  <% if params[:category].downcase == "hated it" %>
+    <h1> HATED </h1> 
 
-  <% elsif user_movies_path(params[category: "LOVED+IT"]) %>
-  <h1> Movies I Love </h1>
+  <% elsif params[:category].downcase == "loved it" %>
+    <h1> LOVED </h1>
 
-  <% elsif user_movies_path(params[category: "Want+to+see"]) %>
-  <h1> Movies I Want to See </h1>
+  <% elsif params[:category].downcase == "want to see" %>
+    <h1> Want To See </h1>
 
   <% end %>
 
   <div class="all-movies">
     <% @reviews.each do |review| %>
       <div class="single-movie">
-        <p><a href="http://www.canistream.it/search/movie/<%= review.movie.title.gsub( /\s/, '+' )%>"><%= review.movie.title %></a></p>
+        <div class="movie-title"><p><a href="http://www.canistream.it/search/movie/<%= review.movie.title.gsub( /\s/, '+' )%>"><%= review.movie.title %></a></p></div>
         <img src="<%= review.movie.img_url %>" alt="Movie Poster" width="175">
       </div>
     <% end %>
